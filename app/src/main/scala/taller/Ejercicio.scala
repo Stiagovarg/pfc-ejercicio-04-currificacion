@@ -17,7 +17,8 @@ class Ejercicio() {
 
   // Punto 2. La suma de la sesión con tres grupos de parámetros.
   def suma4(f: Int => Int)(prox: Int => Int)(a: Int, b: Int): Int = {
-    0
+    if(a>b) 0
+    else f(a) + suma4(a:Int = a)(a:Int a+1)(prox(a),b)
 
   }
 
