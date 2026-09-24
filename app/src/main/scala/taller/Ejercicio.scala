@@ -18,13 +18,13 @@ class Ejercicio() {
   // Punto 2. La suma de la sesión con tres grupos de parámetros.
   def suma4(f: Int => Int)(prox: Int => Int)(a: Int, b: Int): Int = {
     if(a>b) 0
-    else f(a) + suma4(a:Int = a)(a:Int a+1)(prox(a),b)
+    else f(a) + suma4(f)(prox)(prox(a),b)
 
   }
 
   // suma4 con f y prox ya fijados: cuadrados de uno en uno.
   def sumaCuadradosSuc: (Int, Int) => Int = {
-    (a,b)=>0// Completar con una aplicación parcial de suma4
+    sumaCuadradoSuc(suma4(f => f*f)(f => f+1),b)// Completar con una aplicación parcial de suma4
   }
 
   // Punto 3. La operación y su valor inicial en los dos primeros grupos.
